@@ -30,7 +30,7 @@ public class OrdersWriter {
 
     private String getContentForOrder(Order order) {
         StringBuffer sb = new StringBuffer("{");
-        sb.append("\"id\": ");
+        sb.append("\"id\": "); //TODO zrobić dodatkową metodę tworzącą "klucz":"wartosc"
         sb.append(order.getId());
         sb.append(", ");
         sb.append("\"products\": [");
