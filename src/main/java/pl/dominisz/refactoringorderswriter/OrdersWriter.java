@@ -1,5 +1,7 @@
 package pl.dominisz.refactoringorderswriter;
 
+import java.math.BigDecimal;
+
 public class OrdersWriter {
     private Orders orders;
 

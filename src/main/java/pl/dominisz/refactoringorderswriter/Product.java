@@ -1,13 +1,15 @@
 package pl.dominisz.refactoringorderswriter;
 
+import java.math.BigDecimal;
+
 public class Product {
     private String code;
-    private int color;
-    private int size;
-    private double price;
+    private int color; //TODO zamienić na Color
+    private int size; //TODO zamienić na Size
+    private BigDecimal price;
     private String currency;
 
-    public Product(String code, int color, int size, double price, String currency) {
+    public Product(String code, int color, int size, BigDecimal price, String currency) {
         this.code = code;
         this.color = color;
         this.size = size;
@@ -27,7 +29,7 @@ public class Product {
         return size;
     }
 
-    public double getPrice() {
+    public BigDecimal getPrice() {
         return price;
     }
 
