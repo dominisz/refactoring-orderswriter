@@ -1,12 +1,30 @@
 # Refactoring `OrdersWriter`
 
-## Source
-Based on https://github.com/stanlylau/refactoring-kata 
+## Źródło
+Oryginalny kod źródłowy znajduje się w repozytorium https://github.com/stanlylau/refactoring-kata 
 
-## Goal
-Remove code smells found in `OrdersWriter` class without using JSON libraries, while keeping the `OrdersWriterTest` pass.
+## Aplikacja
 
-## Guide
-If you're new to code smells and/or refactoring, please read https://sourcemaking.com/refactoring for a quick introduction and https://martinfowler.com/books/refactoring.html for further understanding.
+W aplikacji znajdują się następujące klasy:
+- `Product` - przechowuje informacje o produkcie (`code`, `color`, `size`, `price`, `currency`)
+- `Order` - przechowuje informacje o zamówieniu, czyli identyfikator oraz listę produktów
+- `Orders` - lista zakupów
+- `OrdersWriter` - główna klasa w aplikacji, dokonuje zamiany `Orders` na format JSON
+- `OrdersWriterTest` - testy jednostkowe dla klasy `OrdersWriter`
 
-Tested on Java 1.8. To run the tests, use `mvn test`.
+## Uruchomienie testów
+
+Wykonaj polecenie
+```
+mvn test
+```
+
+## Zadania
+
+W zadaniu należy dokonać refaktoryzacji klasy `OrdersWriter` (jak również innych klas):
+- wykorzystaj technikę wyodrębniania metody do podziału metody `getContent` na mniejsze elementy
+- utwórz odpowiednią klasę zamiast metody `getSizeFor`
+- utwórz odpowiednią klasę zamiast metody `getColorFor`
+- wykorzystaj typ `BigDecimal` dla pola `price`
+- wykorzystaj typ `Currency` dla pola `currency`
+
